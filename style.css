@@ -39,7 +39,7 @@ header
     display: grid;
     grid-template-areas:
     "img menu inscription"
-    "titre-principal titre-principal titre-principal";
+    "titre-principal titre-principal titre-principal ";
     grid-template-columns:20% 70% 10%;
 }
 header img 
@@ -73,6 +73,7 @@ header img
     grid-area: titre-principal;
     line-height: 1.3rem;
     padding: 1rem 0 0.7rem 0;
+    
 }
 /* fin menu nav */
 /* FIN HEADER */
