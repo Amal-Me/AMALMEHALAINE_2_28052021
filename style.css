@@ -7,7 +7,7 @@ html
 body
 {
     font-family:'Raleway', sans-serif;
-    max-width: 1600px; 
+    width: clamp(320px, 100%, 1600px); 
     margin: 0 auto; 
     font-size: 16px; /* Pour les navigateurs qui ne supportent pas le Rem */
     font-size: 1.6rem; /* Pour les navigateurs « Responsive » */
@@ -527,25 +527,25 @@ footer p
     }
     #Activites 
     {
-        margin: 0 0 5rem 0;
+        margin: 0 0 2.9rem 0;
     }
     .Activites img 
     {
         width: 33.5rem;
         height: 19rem;
     }
-    .img-2, .img-5
+    .titre-activite
     {
         margin-bottom: -1.9rem;
-    }             
-    .ta
+    }           
+    .Activites .bloc 
     {
-        margin-bottom: -1.9rem;
+        margin: auto;
     }
     footer 
     {
         flex-direction: column;
-        margin-top: 1rem;
+        margin-top: 2.8rem;
         padding-left: 3rem;
         width: 100%;
         box-sizing: border-box;
@@ -625,9 +625,9 @@ footer p
 }
 @media screen and (min-width:651px) 
 {
-    .fa-search 
+    button .icone-recherche 
     {
-        visibility: hidden;
+        display: none;
     }
     .menu a:active
     {
