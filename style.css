@@ -7,7 +7,7 @@ html
 body
 {
     font-family:'Raleway', sans-serif;
-    width: clamp(320px, 100%, 1600px); 
+    min-width:320px; 
     margin: 0 auto; 
     font-size: 16px; /* Pour les navigateurs qui ne supportent pas le Rem */
     font-size: 1.6rem; /* Pour les navigateurs « Responsive » */
@@ -41,6 +41,7 @@ header
     "img menu inscription"
     "titre-principal titre-principal titre-principal ";
     grid-template-columns:20% 70% 10%;
+    max-width: 1600px;    
 }
 header img 
 {
@@ -79,7 +80,8 @@ header img
 /* FIN HEADER */
 main 
 {
-    margin:0 5.1rem;   
+    margin:0 5.1rem;     
+    max-width: 1600px;      
 }
 /* DEBUT RECHERCHE */
 .recherche 
@@ -225,6 +227,11 @@ main
     object-fit:cover;
     margin-left: -1rem;
 }
+.hebergement a:hover
+{ 
+    border:solid 0.3rem white;
+    opacity: 0.8;
+} 
 .etoile-bleu
 {
     color:#0065fc;
@@ -341,6 +348,10 @@ main
     object-fit: cover;
     border-radius: 2rem;    
 }
+.bloc 
+{
+    margin-right: 2rem;
+}
 .Activites div 
 {
     margin-top: -1.9rem ;
@@ -353,6 +364,14 @@ main
     border-radius: 0 0 2rem 2rem; 
     box-shadow: 0.2rem 0.5rem 0.8rem rgb(235, 233, 233);
 }
+
+.Activites img:hover
+{
+    transform: translate(0, -1.2rem);
+    opacity: 0.9;
+    transition-duration: 0.5s;
+}
+
 .img-1, .img-4 
 {
    height: 44.4rem;
@@ -415,7 +434,8 @@ footer p
     }
     .inscription 
     {
-        padding-left:7rem;
+        justify-self: end;
+        padding-right: 2rem;
         margin-top: 4rem;
     }
     .menu a 
@@ -640,4 +660,25 @@ footer p
         border-top: 0.2rem solid #0065fc;
     }   
 }
-
+@media screen and (min-width:1700px)
+{
+    header, main 
+    {
+        margin: auto;
+    }
+}
+@media screen and (min-width:990px) and (max-width:1400px)
+{
+    .Activites
+    {
+        justify-content: space-around;
+    }
+    .bloc 
+    {
+        min-width: 34%;
+    }
+    .titre-activite 
+    {
+        max-width:28.4rem ;
+    }
+}
